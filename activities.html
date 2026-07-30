@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Activities — events, personal projects, and volunteer work by Anthony Yiu.">
+  <title>Activities — Anthony Yiu</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .activities-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: clamp(48px, 8vw, 96px) clamp(24px, 5vw, 42px) 40px;
+    }
+    .activities-page .page-heading {
+      font: 500 clamp(40px, 6vw, 72px)/1.02 var(--display);
+      letter-spacing: -0.05em;
+      margin: 0 0 24px;
+    }
+    .activities-page .page-intro {
+      font-size: clamp(16px, 1.4vw, 18px);
+      line-height: 1.75;
+      color: var(--ink);
+      margin: 0 0 56px;
+      max-width: 680px;
+    }
+    .activities-page .section-heading {
+      font: 600 24px/1.2 var(--display);
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .activities-page .section-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 32px;
+      max-width: 600px;
+    }
+    .activities-page .timeline {
+      margin: 0 0 56px;
+    }
+    .activities-page .timeline-entry {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--purple);
+    }
+    .activities-page .timeline-entry:last-child {
+      border-bottom: 1px solid var(--purple);
+    }
+    .activities-page .timeline-date {
+      font-size: 14px;
+      color: var(--muted);
+      padding-top: 2px;
+    }
+    .activities-page .timeline-content h3 {
+      font: 600 17px/1.3 var(--display);
+      letter-spacing: -0.02em;
+      margin: 0 0 4px;
+      color: var(--ink);
+    }
+    .activities-page .timeline-role {
+      font-size: 14px;
+      color: var(--ink);
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+    .activities-page .timeline-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+      max-width: 480px;
+    }
+    .activities-page .timeline-desc ul {
+      margin: 4px 0 0;
+      padding-left: 18px;
+    }
+    .activities-page .timeline-desc li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .activities-page .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 0 0 56px;
+    }
+    .activities-page .project-entry {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.4);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .activities-page .project-entry:hover {
+      border-color: var(--purple);
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+      transform: translateY(-2px);
+    }
+    .activities-page .project-entry-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .activities-page .project-entry h3 {
+      font: 600 18px/1.3 var(--display);
+      letter-spacing: -0.02em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .activities-page .project-entry-tag {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .activities-page .project-entry p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+    }
+    .activities-page .project-entry ul {
+      margin: 4px 0 0;
+      padding-left: 18px;
+    }
+    .activities-page .project-entry ul li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .activities-page .project-entry-thumb {
+      width: 120px;
+      height: 75px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--cream);
+      border: 1px solid var(--line);
+    }
+    .activities-page .project-entry-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .activities-page .project-entry-arrow {
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--muted);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .activities-page .project-entry:hover .project-entry-arrow {
+      color: var(--purple);
+      transform: translateX(4px);
+    }
+    .award-tag {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--ink);
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 640px) {
+      .activities-page .timeline-entry { grid-template-columns: 1fr; gap: 6px; }
+      .activities-page .project-entry { grid-template-columns: 1fr; }
+      .activities-page .project-entry-thumb { width: 100%; height: auto; aspect-ratio: 16/10; }
+    }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="scroll-progress"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <a href="index.html#work">Works <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="project1.html">A Beautiful Machine</a>
+          <a href="project2.html">Soul Containment Protocol</a>
+          <a href="project3.html">UX Ethnography</a>
+          <a href="project4.html">Data Visualization</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="about.html">About <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html">About</a>
+          <a href="activities.html" class="active">Activities</a>
+        </div>
+      </div>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="mailto:aky6@sfu.ca">Get in touch</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <main class="activities-page">
+    <h1 class="page-heading">Activities</h1>
+    <p class="page-intro">Beyond coursework — events, personal projects, and volunteer work that shaped my perspective and skills.</p>
+
+    <h2 class="section-heading">Events</h2>
+    <p class="section-desc">Conferences, hackathons, and industry events.</p>
+    <div class="projects-list">
+      <a href="activities%20pages/event-1.html" class="project-entry">
+        <div class="project-entry-info">
+          <span class="project-entry-tag">Showcase · July 15, 2026 <span class="award-tag"> People's Choice</span></span>
+          <h3>HUBBUB'26 — CityStudio Showcase</h3>
+          <ul>
+            <li>Presented PrepMate — multifunctional induction stove cover for renters</li>
+            <li>Won People's Choice for "Most Creative Project"</li>
+            <li>Tied for "Most Promising Climate Impact"</li>
+          </ul>
+        </div>
+        <div class="project-entry-thumb">
+          <img src="https://via.placeholder.com/400x250" alt="HUBBUB'26 event" />
+        </div>
+        <span class="project-entry-arrow">&gt;</span>
+      </a>
+      <a href="activities%20pages/event-2.html" class="project-entry">
+        <div class="project-entry-info">
+          <span class="project-entry-tag">Workshop</span>
+          <h3>3D Animation Workshop</h3>
+          <p>Weekend intensive on character rigging and motion capture in Maya.</p>
+        </div>
+        <div class="project-entry-thumb">
+          <img src="https://via.placeholder.com/400x250" alt="Event thumbnail" />
+        </div>
+        <span class="project-entry-arrow">&gt;</span>
+      </a>
+    </div>
+
+    <h2 class="section-heading">Personal Projects</h2>
+    <p class="section-desc">Experimental work outside of coursework and client projects.</p>
+    <div class="projects-list">
+      <a href="activities%20pages/personal-project-1.html" class="project-entry">
+        <div class="project-entry-info">
+          <span class="project-entry-tag">Interaction Design</span>
+          <h3>Gesture-Based Navigation Prototype</h3>
+          <p>Hand tracking interface for menu navigation. Built with MediaPipe and vanilla JS.</p>
+        </div>
+        <div class="project-entry-thumb">
+          <img src="https://via.placeholder.com/400x250" alt="Project thumbnail" />
+        </div>
+        <span class="project-entry-arrow">&gt;</span>
+      </a>
+      <a href="activities%20pages/personal-project-2.html" class="project-entry">
+        <div class="project-entry-info">
+          <span class="project-entry-tag">3D / Generative</span>
+          <h3>Procedural Terrain Generator</h3>
+          <p>Real-time terrain generation using noise functions and WebGL shaders.</p>
+        </div>
+        <div class="project-entry-thumb">
+          <img src="https://via.placeholder.com/400x250" alt="Project thumbnail" />
+        </div>
+        <span class="project-entry-arrow">&gt;</span>
+      </a>
+      <a href="activities%20pages/personal-project-3.html" class="project-entry">
+        <div class="project-entry-info">
+          <span class="project-entry-tag">Data Visualization</span>
+          <h3>Transit System Flow Map</h3>
+          <p>Interactive visualization of public transit patterns using GTFS data and D3.</p>
+        </div>
+        <div class="project-entry-thumb">
+          <img src="https://via.placeholder.com/400x250" alt="Project thumbnail" />
+        </div>
+        <span class="project-entry-arrow">&gt;</span>
+      </a>
+    </div>
+
+    <h2 class="section-heading">Volunteer</h2>
+    <p class="section-desc">Community involvement and volunteer work.</p>
+    <div class="timeline">
+      <div class="timeline-entry">
+        <span class="timeline-date">Jul 2024 — Present</span>
+        <div class="timeline-content">
+          <h3>Greater Vancouver Food Bank</h3>
+          <p class="timeline-role">Volunteer</p>
+          <ul>
+            <li>Wash, slice, and prepare produce for dehydration</li>
+            <li>Quality check, sort, and package fresh food</li>
+            <li>Provide front-line client support and maintain organization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-entry">
+        <span class="timeline-date">Jul 2021 — Jul 2022</span>
+        <div class="timeline-content">
+          <h3>Vancouver Public Library</h3>
+          <p class="timeline-role">Teen Advisory Group</p>
+          <ul>
+            <li>Contributed to publishing Ink Magazine and organizing the Page by Page Contest</li>
+            <li>Provided input on design and promotion</li>
+            <li>Collaborated with peers to improve programming and services</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-entry">
+        <span class="timeline-date">Sep 2017 — Jun 2022</span>
+        <div class="timeline-content">
+          <h3>South Vancouver Neighborhood House</h3>
+          <p class="timeline-role">Neighborhood Youth Initiative — Volunteer</p>
+          <ul>
+            <li>Coordinated and delivered youth programming and events</li>
+            <li>Developed activity schedules and logistics with staff and peers</li>
+            <li>Designed promotional materials using Canva</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-entry">
+        <span class="timeline-date">Mar 2022</span>
+        <div class="timeline-content">
+          <h3>Guardteck Security</h3>
+          <p class="timeline-role">Intern</p>
+          <ul>
+            <li>Reported to supervisor on task completion and issues</li>
+            <li>Handled inventory tracking and management</li>
+            <li>Made phone calls to employees for shift scheduling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="back-to-top-wrap">
+    <div></div>
+    <a class="back-to-top" href="#top">↑ Back to top</a>
+    <div class="next-project"><a href="index.html">Home →</a></div>
+  </div>
+
+  <footer class="site-footer section-pad">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <p>© 2026 Anthony Yiu. Interactive Arts &amp; Technology.</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/aky6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://www.youtube.com/@anthonyy115" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="icons/youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://bsky.app/profile/ant-hony15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <img src="icons/bluesky.png" alt="Bluesky" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

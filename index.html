@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anthony Yiu — Interactive Arts & Technology portfolio." />
+  <title>Anthony Yiu — Interactive Arts Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="top"></div>
+  <div class="scroll-progress"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <a href="#work">Works <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="project1.html">A Beautiful Machine</a>
+          <a href="project2.html">Soul Containment Protocol</a>
+          <a href="project3.html">UX Ethnography</a>
+          <a href="project4.html">Data Visualization</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="about.html">About <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html">About</a>
+          <a href="activities.html">Activities</a>
+        </div>
+      </div>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="mailto:aky6@sfu.ca">Get in touch</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="eyebrow reveal"><span class="status-dot"></span> Fourth-year student · Interactive Arts & Technology</div>
+      <h1 class="hero-title reveal">Welcome to<br /><em>Anthony's</em><br />portfolio!</h1>
+      <div class="hero-bottom reveal">
+        <p class="hero-intro">A portfolio of physical and digital work shaped by animation, visual storytelling, and a love of graphic novels.</p>
+        <a class="circle-link" href="#work" aria-label="Scroll to selected work">↓</a>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Capabilities"><div class="ticker-track"><span>3D animation</span><b>✳</b><span>Visual storytelling</span><b>✳</b><span>Digital media</span><b>✳</b><span>Physical prototyping</span><b>✳</b><span>UX research</span><b>✳</b></div></section>
+
+    <section class="work section-pad" id="work">
+      <div class="section-heading reveal"><div><span class="kicker">01 / Selected work</span><h2>Projects</h2></div></div>
+      <div class="project-grid">
+        <a class="project-card project-large reveal" href="project1.html">
+          <span class="image-label">IAT106 / 01</span>
+          <div class="project-image image-arc"><img src="https://framerusercontent.com/images/pDfecOOl8oC0M1aQMzCheFE0nU.png?width=625&height=288" alt="Physical model" /></div>
+          <div class="project-meta"><div><h3>A Beautiful Machine</h3><p>Physical model · Sep–Dec 2024</p></div><span class="arrow">&gt;</span></div>
+        </a>
+        <a class="project-card reveal" href="project2.html">
+          <span class="image-label">IAT343 / 02</span>
+          <div class="project-image image-mori"><img src="IAT343%20soul%20containment%20porotcol/f0.avif" alt="3D short film still" /></div>
+          <div class="project-meta"><div><h3>Soul Containment Protocol</h3><p>3D short film · May–Aug 2025</p></div><span class="arrow">&gt;</span></div>
+        </a>
+        <a class="project-card reveal" href="project3.html">
+          <span class="image-label">UX / 03</span>
+          <div class="project-image image-pulse"><img src="https://framerusercontent.com/images/4eAmUKOrU4b9NrSsVXRGDdxcmiY.png?width=581&height=360" alt="UX research project" /></div>
+          <div class="project-meta"><div><h3>UX Ethnography (VRRA)</h3><p>User experience research</p></div><span class="arrow">&gt;</span></div>
+        </a>
+        <a class="project-card project-wide reveal" href="project4.html">
+          <span class="image-label">DATA / 04</span>
+          <div class="project-image image-common"><div class="common-type">data<br /><span>stories</span></div></div>
+          <div class="project-meta"><div><h3>Data Visualization</h3><p>Interactive media</p></div><span class="arrow">&gt;</span></div>
+        </a>
+      </div>
+      
+      <div class="projects-cta reveal">
+        <a href="activities.html" class="cta-link">View Personal Projects →</a>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="services">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker">02 / Skills</span>
+          <h2>Making things<br /><em>move.</em></h2>
+        </div>
+        <p>A hands-on practice across 3D production, physical making, editing, research, and collaboration.</p>
+      </div>
+      <div class="service-list">
+        <article class="service reveal">
+          <h3>3D animation</h3>
+          <p>Autodesk Maya modeling, texturing, rigging, Mixamo, storyboarding, video editing, and sound design.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Physical design</h3>
+          <p>Onshape CAD modeling, spatial thinking, prototyping, and building with constrained everyday materials.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Research & media</h3>
+          <p>UX ethnography, data visualization, digital storytelling, project coordination, and team collaboration.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="about-art reveal"><div class="portrait-shape"></div><div class="about-sticker">Always<br />curious<br />✳</div></div>
+      <div class="about-copy reveal">
+        <span class="kicker">03 / About Anthony</span>
+        <h2>Hi, I'm<br /><em>Anthony Yiu.</em></h2>
+        <p>I'm a fourth-year Interactive Arts & Technology student specializing in 3D animation, visual storytelling, and digital media production. As a Bachelor of Arts student, I enjoy creating both physical and digital media.</p>
+        <p>My love of animation and graphic novels drives me to make work that is imaginative, tactile, and thoughtful.</p>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact"><span class="kicker reveal">04 / Contact</span><h2 class="reveal">Get in touch</h2><div class="contact-details reveal"><a class="contact-email" href="mailto:aky6@sfu.ca">aky6@sfu.ca</a><div class="contact-social"><a href="https://www.linkedin.com/in/aky6/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn" /></a><a href="https://www.youtube.com/@anthonyy115" target="_blank" rel="noopener" aria-label="YouTube"><img src="icons/youtube.png" alt="YouTube" /></a><a href="https://bsky.app/profile/ant-hony15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><img src="icons/bluesky.png" alt="Bluesky" /></a></div></div></section>
+  </main>
+
+  <div class="back-to-top-wrap back-to-top-no-gap">
+    <div></div>
+    <a class="back-to-top" href="#top">↑ Back to top</a>
+    <div class="next-project"><a href="about.html">About →</a></div>
+  </div>
+
+  <footer class="site-footer section-pad">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <p>© 2026 Anthony Yiu. Interactive Arts &amp; Technology.</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/aky6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://www.youtube.com/@anthonyy115" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="icons/youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://bsky.app/profile/ant-hony15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <img src="icons/bluesky.png" alt="Bluesky" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

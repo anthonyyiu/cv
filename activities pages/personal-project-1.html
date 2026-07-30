@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interaction Design Summit — three-day conference focused on UX research methods.">
+  <title>Interaction Design Summit — Anthony Yiu</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="project-page.css" />
+  <style>
+    .back-link-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 32px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .back-link-top:hover { color: var(--purple); }
+    .back-link-top svg { width: 20px; height: 20px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      margin-top: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+    .back-link:hover { color: var(--ink); border-color: var(--purple); background: rgba(124, 58, 237, 0.05); }
+    .back-link svg { width: 16px; height: 16px; }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  <header class="site-header project-nav">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <a href="index.html#work">Works <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="project1.html">A Beautiful Machine</a>
+          <a href="project2.html">Soul Containment Protocol</a>
+          <a href="project3.html">UX Ethnography</a>
+          <a href="project4.html">Data Visualization</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="about.html">About <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html">About</a>
+          <a href="activities.html">Activities</a>
+        </div>
+      </div>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="mailto:aky6@sfu.ca">Get in touch</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <main class="project-main" id="top">
+    <a href="activities.html" class="back-link-top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to Activities
+    </a>
+
+    <span class="project-kicker">Conference / 2024</span>
+    <h1 class="project-title">Interaction Design Summit</h1>
+    <p class="project-intro">Three-day conference focused on UX research methods and prototyping tools. Attended workshops on Figma advanced techniques and user testing frameworks.</p>
+
+    <div class="project-hero">
+      <img src="https://via.placeholder.com/800x400" alt="Event hero image" />
+    </div>
+
+    <div class="project-info">
+      <div><span class="project-label">Type</span><strong>Conference</strong></div>
+      <div><span class="project-label">Duration</span><strong>3 days</strong></div>
+      <div><span class="project-label">Role</span><strong>Attendee</strong></div>
+      <div><span class="project-label">Focus</span><strong>UX Research & Prototyping</strong></div>
+    </div>
+
+    <section class="project-section">
+      <h2>Overview</h2>
+      <p>The Interaction Design Summit was a three-day intensive conference bringing together designers, researchers, and prototyping experts from around the world. The event focused on practical applications of UX research methods and modern prototyping tools.</p>
+      <p>I attended to deepen my understanding of user testing frameworks and advanced Figma techniques that could be applied to my personal projects and future client work.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Key Workshops</h2>
+      <p>The summit featured hands-on workshops covering topics like rapid prototyping, user interview techniques, and design system implementation. I participated in sessions on advanced Figma components and auto-layout strategies.</p>
+      
+      <figure class="figure-block">
+        <img src="https://via.placeholder.com/800x450" alt="Workshop session" />
+        <figcaption>Attending a workshop on advanced Figma prototyping techniques</figcaption>
+      </figure>
+
+      <p>One of the most valuable sessions covered user testing frameworks that I've since applied to my Gesture-Based Navigation Prototype, helping me structure more effective usability tests.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Networking & Takeaways</h2>
+      <p>Beyond the workshops, the summit provided excellent networking opportunities with industry professionals. I connected with designers working on similar accessibility challenges and learned about emerging tools in the prototyping space.</p>
+      <p>The key takeaway was the importance of iterative testing early in the design process. This reinforced my approach to personal projects, where I now build quick prototypes to test assumptions before committing to full implementations.</p>
+    </section>
+
+    <a href="activities.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to Activities
+    </a>
+  </main>
+
+  <div class="back-to-top-wrap">
+    <div></div>
+    <a class="back-to-top" href="#top">↑ Back to top</a>
+    <div class="next-project"><a href="activities.html">Activities →</a></div>
+  </div>
+
+  <footer class="site-footer section-pad">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <p>© 2026 Anthony Yiu. Interactive Arts &amp; Technology.</p>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="icons/youtube.png" alt="YouTube" />
+      </a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Bluesky">
+        <img src="icons/bluesky.png" alt="Bluesky" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
