@@ -7,6 +7,42 @@
   <title>UX Ethnography — Vancouver Rabbit Rescue & Advocacy — Anthony Yiu</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="project-page.css" />
+  <style>
+    .project-info-role {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .project-info-role .role-line {
+      display: block;
+    }
+    .project-info-4col {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 28px 0;
+    }
+    .project-info-4col .meta-item .meta-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .project-info-4col .meta-item .meta-value {
+      display: block;
+      margin-top: 4px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    @media (max-width: 640px) {
+      .project-info-4col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="scroll-progress"></div>
@@ -46,12 +82,33 @@
       <figcaption>Figure 1. Attending VRRA's 20th Annual Rabbit Festival to gather ethnographic data and interview attendees and staff.</figcaption>
     </div>
 
-    <div class="project-info">
-      <div><span class="project-label">Role</span><strong>Researcher</strong></div>
-      <div><span class="project-label">Timeframe</span><strong>Oct–Nov 2025</strong></div>
-      <div><span class="project-label">Methods</span><strong>Observation · synthesis</strong></div>
-      <div><span class="project-label">Focus</span><strong>Human experience</strong></div>
+    <div class="project-info-4col">
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value project-info-role">
+          <span class="role-line">Researcher</span>
+          <span class="role-line">UX Designer</span>
+          <span class="role-line">Note Taker</span>
+        </span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Timeframe</span>
+        <span class="meta-value">Oct–Nov 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Methods</span>
+        <span class="meta-value">Interview</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Focus</span>
+        <span class="meta-value">User Experience</span>
+      </div>
     </div>
+
+    <section class="project-section">
+      <h2>Team</h2>
+      <p><strong>Eric R.</strong> · <strong>Anthony Y.</strong> · <strong>Nicky W.</strong> · <strong>Julia Z.</strong> · <strong>Alexander K.</strong> · <strong>Daffodil H.</strong></p>
+    </section>
 
     <section class="project-section">
       <h2>Start with people</h2>
@@ -60,22 +117,22 @@
 
       <figure class="figure-block media-full">
         <iframe src="IAT333-vrra/IAT333%20Participant%20Group%20Poster%20Resubmit%20portfolio%20group.pdf" title="Participant group poster"></iframe>
-        <figcaption>Figure 2. Participant group poster about what we knew about the organization. Anthony Yiu (2025)</figcaption>
+        <figcaption>Figure 2. Participant group poster about what we knew about the organization.</figcaption>
       </figure>
 
       <figure class="figure-block media-full">
         <iframe src="IAT333-vrra/IAT333%20week%207%20concepts%20poster.pdf" title="Concepts poster"></iframe>
-        <figcaption>Figure 3. Week 7 concepts poster outlining three ideas proposed to improve the adoption process. Anthony Yiu (2025)</figcaption>
+        <figcaption>Figure 3. Week 7 concepts poster outlining three ideas proposed to improve the adoption process.</figcaption>
       </figure>
 
       <figure class="figure-block media-full">
         <iframe src="IAT333-vrra/ParticipatoryWorkshopSlides.pdf" title="Workshop slides"></iframe>
-        <figcaption>Figure 4. Participatory workshop report and slides from the group workshop with past adopters. Anthony Yiu (2025)</figcaption>
+        <figcaption>Figure 4. We held participatory workshops in groups, over Google Meet and Microsoft Teams, using Figma's Figjam to survey participants about their experience and process with the VRRA and adoption processes.</figcaption>
       </figure>
 
       <figure class="figure-block media-full">
         <iframe src="IAT333-vrra/report.pdf" title="Final report"></iframe>
-        <figcaption>Figure 5. Final detailed report summarizing the research and recommendations. Anthony Yiu (2025)</figcaption>
+        <figcaption>Figure 5. Final detailed report summarizing the research and recommendations.</figcaption>
       </figure>
     </section>
   </main>
