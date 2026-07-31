@@ -42,7 +42,7 @@
     .back-link svg { width: 16px; height: 16px; }
     .event-meta-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       padding: 18px 0;
       border-top: 1px solid var(--line);
@@ -86,8 +86,48 @@
       line-height: 1.75;
       color: #4c4b45;
     }
-    .event-section .team-line {
-      margin: 0 0 4px;
+    .figure-split {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      margin: 24px 0 28px;
+      padding: 8px 0;
+    }
+    .figure-split img {
+      width: 55%;
+      max-width: 55%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .figure-split figcaption {
+      display: block;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+      padding: 4px 0;
+      flex: 1;
+    }
+    .figure-split figcaption strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .figure-split {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .figure-split img {
+        width: 100%;
+        max-width: 100%;
+      }
+      .event-meta-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -126,13 +166,13 @@
     </a>
 
     <span class="project-kicker">Showcase · July 15, 2026</span>
-    <h1 class="project-title">HUBBUB'26 — <br /><em>CityStudio Showcase</em></h1>
+    <h1 class="project-title">HUBBUB'26 - <br /><em>CityStudio Showcase</em></h1>
 
     <p class="project-intro">Presented PrepMate at CityStudio's HUBBUB'26 student innovation showcase. Won People's Choice for "Most Creative Project" and tied for "Most Promising Climate Impact."</p>
 
     <div class="project-hero">
-      <img src="https://via.placeholder.com/800x400" alt="HUBBUB'26 event photo" />
-      <figcaption>HUBBUB'26 event photo</figcaption>
+      <img src="../hubbub photos/p1.jpg" alt="Award ceremony" />
+      <figcaption>Figure 1. Wesley Zhang (left) and Anthony Yiu (right) accepting the People's Choice Award with Nina Abizadeh, CityStudio Manager.</figcaption>
     </div>
 
     <div class="event-meta-grid">
@@ -150,7 +190,7 @@
       </div>
       <div class="meta-item">
         <span class="meta-label">Course</span>
-        <span class="meta-value">IAT 336 — Materials in Practice</span>
+        <span class="meta-value">IAT 336 - Materials in Practice</span>
       </div>
     </div>
 
@@ -160,28 +200,122 @@
 
       <p class="team-line"><strong>Team:</strong> Anthony Yiu, Wesley Zhang, Lok To Oscar Ho</p>
       <p class="team-line"><strong>Instructor:</strong> Ken Zupan · <strong>City Partner:</strong> Andrea Wickham</p>
-      <p><em>"I'd buy PrepMate for my mom."</em> — Audience feedback</p>
+      <p><em>"I'd buy PrepMate for my mom."</em> - Audience feedback</p>
     </section>
 
     <section class="event-section">
-      <h2>Challenge</h2>
-      <p>Our project aims to tackle the issue faced by many renters in greater Vancouver- limited kitchen space in small apartments. Additionally, we are designing for our persona (target user)- Sarah, a busy single mother to a 5 year old child. So, our design includes considerations with a focus on efficiency, portability, and child safety.</p>
+      <h2>Project Poster</h2>
+      <figure class="figure-block">
+        <img src="../hubbub photos/p2 poster.png" alt="PrepMate poster" />
+        <figcaption>Figure 2. PrepMate project poster - IAT336 Materials in Practice.</figcaption>
+      </figure>
     </section>
 
     <section class="event-section">
-      <h2>What is PrepMate?</h2>
-      <p>Our solution is a multifunctional induction stove cover. The design includes a main body, a stove container, and a removable silicone tray, which work together to support several functions. It can serve as a cover, a prep surface, a carrying tray, and even a drying rack over the sink.</p>
+      <h2>Inspiration &amp; Process</h2>
+      <p>We drew inspiration from the space efficiency of folding lunch boxes and later shifted focus to stacking bento boxes. Functions from earlier sketches also played a part in shaping the final form, namely prep space and drying rack, influencing how the final product would be shaped to meet the functions.</p>
 
-      <p>We chose this idea because it responds directly to Sarah's lifestyle and gives her more usable space without requiring major changes to her apartment. It also supports quick transitions between cooking, cleaning, and storage, which is important for a busy parent managing a small home.</p>
+      <div class="figure-split">
+        <img src="../hubbub photos/p3.png" alt="Inspiration sketch 1" />
+        <figcaption><strong>Figure 3.</strong> Early inspiration: lunch box efficiency.</figcaption>
+      </div>
 
-      <p>This project has the potential to improve safety, reduce clutter, and make everyday kitchen routines more efficient for people living in small urban homes. In the future, the design could be adapted to fit different stove sizes and household needs, which makes it a flexible and scalable concept.</p>
+      <div class="figure-split">
+        <img src="../hubbub photos/p4.png" alt="Inspiration sketch 2" />
+        <figcaption><strong>Figure 4.</strong> Shifting to stacking bento boxes.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p5.png" alt="Inspiration sketch 3" />
+        <figcaption><strong>Figure 5.</strong> Initial ideation: drying rack and silicone prep mat.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p6.png" alt="Inspiration sketch 4" />
+        <figcaption><strong>Figure 6.</strong> Final inspiration: multifunctional stacking.</figcaption>
+      </div>
     </section>
 
     <section class="event-section">
-      <h2>Next Steps</h2>
-      <p>As of now, we have no plans to continue working on the project, but to simply share it with CityStudio in this showcase. As our model is medium-fidelity, and given the feedback we recieved previously, there is plenty room for improvement. There is a possible future to continue in a directed studies course, which would involve making a more accurate model with the assigned wood and silicone materials, reworking the sliding mechanisms to improve accessibility, and real user testing.</p>
+      <h2>Fabrication &amp; Assembly</h2>
 
-      <p>Through this project, we learned that our design decisions should keep our personas needs in mind, and that even small details can impact their experience. Which reflect the recommendations we received, such as improving portability, for if the user wants to move the PrepMate in or out or storage, or repositioned on the counter. As PrepMate involves sliding drawer-like parts, accounting for one-handed usage would improve accessibility.</p>
+      <div class="figure-split">
+        <img src="../hubbub photos/p7 onshape.png" alt="Onshape drawing" />
+        <figcaption><strong>Figure 7.</strong> Onshape drawing - parts for laser-cutting preparation. (Anthony Yiu)</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p8 onshape.png" alt="Onshape model" />
+        <figcaption><strong>Figure 8.</strong> Onshape model - assembled digital prototype.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p9.png" alt="Building the model" />
+        <figcaption><strong>Figure 9.</strong> Building the physical model - Anthony, Wesley, and Oscar assembling parts.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p10.png" alt="Spray painting" />
+        <figcaption><strong>Figure 10.</strong> Spray painting the model to brown finish.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p11 onshape exploded.png" alt="Exploded view" />
+        <figcaption><strong>Figure 11.</strong> Exploded perspective view - showing all components and potential positions.</figcaption>
+      </div>
+    </section>
+
+    <section class="event-section">
+      <h2>Persona &amp; Context of Use</h2>
+      <p><strong>Persona:</strong> Sarah Jones is a 30-year-old elementary school teacher and single mother living in a small apartment in Burnaby, BC, with her 5-year-old child. Her daily routine is busy and fast-paced, especially in the mornings when she needs to prepare meals while getting herself and her child ready for the day. Because her kitchen is small and has limited counter space, cooking and organizing can feel difficult and stressful. Sarah values practical and efficient solutions that help her save space, stay organized, and maintain a safer kitchen environment for both herself and her child.</p>
+
+      <figure class="figure-block">
+        <img src="../hubbub photos/p12 maya render.png" alt="Context of use" />
+        <figcaption>Figure 12. Context of use - PrepMate in a small apartment kitchen.</figcaption>
+      </figure>
+    </section>
+
+    <section class="event-section">
+      <h2>Use Cases</h2>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p13 use 1.png" alt="Carrying tray" />
+        <figcaption><strong>Figure 13.</strong> Carrying tray - silicone tray is concave, main body acts as walls and handles to prevent spilling.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p14 use 2.png" alt="Drying rack" />
+        <figcaption><strong>Figure 14.</strong> Drying rack - main body width fits perfectly over apartment sinks. Can be used flipped.</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p15 use 3.png" alt="Prep station" />
+        <figcaption><strong>Figure 15.</strong> Prep station - can be used alongside stove box. (Not recommended that silicone mat be used in place of cutting board as pictured.)</figcaption>
+      </div>
+
+      <div class="figure-split">
+        <img src="../hubbub photos/p16 use 4.png" alt="Storage tray" />
+        <figcaption><strong>Figure 16.</strong> Storage tray - stove box can also be used as pictured. Tray can pull out for storing utensils or tools to avoid cluttering the workspace.</figcaption>
+      </div>
+    </section>
+
+    <section class="event-section">
+      <h2>Showcase Setup</h2>
+
+      <figure class="figure-block">
+        <img src="../hubbub photos/p17.jpg" alt="Showcase setup" />
+        <figcaption>Figure 17. PrepMate on display at the HUBBUB'26 showcase.</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img src="../hubbub photos/p18.jpg" alt="Showcase banners" />
+        <figcaption>Figure 18. HUBBUB'26 showcase banners and event atmosphere.</figcaption>
+      </figure>
+    </section>
+
+    <section class="event-section">
+      <h2>Progress Blog</h2>
+      <p><a href="https://www.tumblr.com/blog/iat336-materialstoveproject" target="_blank" rel="noopener" style="color: var(--purple); text-decoration: underline;">PrepMate Progress Blog (Tumblr)</a></p>
     </section>
 
     <section class="event-section">

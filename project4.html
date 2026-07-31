@@ -3,10 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Data Visualization — an interactive media project by Anthony Yiu." />
+  <meta name="description" content="Data Visualization — horse racing data project by Anthony Yiu." />
   <title>Data Visualization — Anthony Yiu</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="project-page.css" />
+  <style>
+    .website-preview-window {
+      width: 90vw;
+      max-width: 1400px;
+      margin: 24px auto 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #fff;
+    }
+    .website-preview-window .window-tab {
+      height: 28px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+    }
+    .website-preview-window .window-tab .tab-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--body);
+      opacity: 0.6;
+    }
+    .website-preview-window iframe {
+      width: 100%;
+      height: 620px;
+      border: 0;
+      display: block;
+      background: #fff;
+    }
+    .project-info-4col {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 28px 0;
+    }
+    .project-info-4col .meta-item .meta-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .project-info-4col .meta-item .meta-value {
+      display: block;
+      margin-top: 4px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .project-info-4col .meta-item .meta-value .toolkit-line {
+      display: block;
+    }
+    @media (max-width: 760px) {
+      .website-preview-window {
+        width: 100%;
+      }
+      .website-preview-window iframe {
+        height: 460px;
+      }
+      .project-info-4col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 540px) {
+      .website-preview-window iframe {
+        height: 360px;
+      }
+      .project-info-4col {
+        grid-template-columns: 1fr;
+      }
+      .website-preview-window .window-tab .tab-label {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="scroll-progress"></div>
@@ -38,49 +116,78 @@
 
   <main class="project-main" id="top">
     <span class="project-kicker">Interactive media / Data storytelling</span>
-    <h1 class="project-title">Data<br /><em>Visualization.</em></h1>
-    <p class="project-intro">A project about turning information into something people can feel, compare, and understand through structure, rhythm, and visual clarity.</p>
+    <h1 class="project-title">Data<br /><em>Visualization</em></h1>
+    <p class="project-intro">A data visualization project exploring horse racing statistics and records.</p>
 
-    <div class="project-hero">
-      <div style="font: 600 clamp(48px, 8vw, 100px)/.85 var(--display); letter-spacing: -0.08em; text-align: center;">data<br /><span style="color: var(--muted);">stories</span></div>
-    </div>
-
-    <div class="project-info">
-      <div><span class="project-label">Role</span><strong>Designer / maker</strong></div>
-      <div><span class="project-label">Format</span><strong>Interactive media</strong></div>
-      <div><span class="project-label">Approach</span><strong>Visual systems</strong></div>
-      <div><span class="project-label">Focus</span><strong>Clarity</strong></div>
-    </div>
-
-    <section class="project-section">
-      <h2>Make it visible</h2>
-      <p>Data can be technically correct and still feel distant. This project explores how visual hierarchy, pacing, and simple interaction can help a viewer move from overview to detail without losing the larger pattern.</p>
-      <p>I was interested in the moment when a collection of numbers becomes a story that people can actually follow.</p>
-
-      <figure class="figure-block">
-        <img src="https://framerusercontent.com/images/4eAmUKOrU4b9NrSsVXRGDdxcmiY.png?width=581&height=360" alt="Data visualization concept sketch" />
-        <figcaption>Figure 2. An early sketch exploring flow, hierarchy, and pacing in the visual system. Anthony Yiu (2025)</figcaption>
-      </figure>
-
-      <figure class="figure-block">
-        <img src="https://framerusercontent.com/images/4eAmUKOrU4b9NrSsVXRGDdxcmiY.png?width=581&height=360" alt="Data visualization final composition" />
-        <figcaption>Figure 3. A later iteration refining legibility and the relationship between structure and narrative. Anthony Yiu (2025)</figcaption>
-      </figure>
-    </section>
-
-    <section class="project-section">
-      <h2>A visual language</h2>
-      <p>The work centers on clarity and rhythm: using shape, scale, and spacing to guide attention and create an experience that feels legible rather than overwhelming.</p>
-      <div class="project-note">The result is a more personal way of encountering information, closer to exploration than to reading a report.</div>
-    </section>
-
-    <section class="project-section">
-      <h2>Live preview</h2>
-      <p>The project is hosted on GitHub Pages. Explore the interactive visualization below or open it in a new tab.</p>
-      <div class="website-preview">
-        <iframe src="https://yourusername.github.io/data-stories" title="Data Stories — live preview" class="preview-frame"></iframe>
+    <div class="project-info-4col">
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Designer</span>
       </div>
-      <p style="margin-top: 12px;"><a href="https://yourusername.github.io/data-stories" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline;">open in new tab ↗</a></p>
+      <div class="meta-item">
+        <span class="meta-label">Timeframe</span>
+        <span class="meta-value">Mar–Apr 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Toolkit</span>
+        <span class="meta-value">
+          <span class="toolkit-line">Observable</span>
+          <span class="toolkit-line">Visual Studio Code</span>
+        </span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Focus</span>
+        <span class="meta-value">Data clarity &amp; accessibility</span>
+      </div>
+    </div>
+
+    <section class="project-section">
+      <h2>Live Preview</h2>
+      <p>View the interactive data visualization project here:</p>
+    </section>
+  </main>
+
+  <div class="website-preview-window">
+    <div class="window-tab">
+      <span class="tab-label">aky6iat355.github.io</span>
+    </div>
+    <iframe src="https://anthonyyiu.github.io/aky6IAT355/" title="Data Visualization — live preview"></iframe>
+  </div>
+
+  <main class="project-main">
+    <p style="margin-top: 4px;"><a href="https://anthonyyiu.github.io/aky6IAT355/" target="_blank" rel="noopener" style="color: var(--purple); text-decoration: underline;">open in new tab ↗</a></p>
+
+    <section class="project-section">
+      <h2>Project Report</h2>
+      
+      <h3>Motivation</h3>
+      <p>I recently became interested in learning about horse racing after seeing viral posts of the horses on social media and was captivated by their eccentric personalities and mannerisms. My motivations were to make a personal project, as well as learn more about the sport through making this.</p>
+
+      <h3>Problem</h3>
+      <p>The main problem I intend to solve with this website is data organization and accessibility. With horse race records, the data is very dense and extensive, so through data visualizations, the information can be communicated efficiently and effectively, albeit broadly.</p>
+
+      <h3>Target Audience</h3>
+      <p>New or casual horse racing enthusiasts are the intended audience – people who are not experts but want to familiarize themselves with the sport, and even potentially bet at their local racecourses. This website offers general, broad, all-time data, local and racecourse-specific data, and horse lineage record data, which may interest any fan.</p>
+
+      <h3>Dataset</h3>
+      <p><a href="https://www.kaggle.com/datasets/hwaitt/horse-racing/data" target="_blank" rel="noopener" style="color: var(--purple); text-decoration: underline;">https://www.kaggle.com/datasets/hwaitt/horse-racing/data</a></p>
+      <p>This was the main dataset used, though it is not perfect, is missing entries, and has a skewed focus with Great Britain.</p>
+
+      <h3>Limitations and Challenges</h3>
+      <ul>
+        <li>At first, because the dataset was large (~90mb), I had to use Microsoft cloud file connection to import it in ObservableHQ, which made the loading speed very slow.</li>
+        <li>Midway through the project, I realized the dataset did not give units for currency or speed. I ended up cross-referencing a few races, to find that the prizes matched in Pound Sterling.</li>
+        <li>One parameter I didn't understand was what "TR – Top Speed" meant. The numbers didn't make sense for mph or km/h. Looking it up online suggested it meant "speed rating" – a measurement of speed accounting for several track conditions. That sounded correct at first, but online records showed that a speed rating of 140 was already the peak, while the numbers from the dataset far exceeded that. I was further confused and decided to remove that visualization.</li>
+        <li>After setting up the GitHub website, I noticed that it took a long time to load the website and was nearly impossible to load on mobile. I hypothesize that this was due to having too many Observable visualization embeds. I later tidied the code to not load various previous versions of the same Observable notebook.</li>
+        <li>Additionally, the Leaflet map markers that I wanted to sync with the dataset have this error where, even though I checked the data exists, selecting certain racecourse markers display a blank visualization.</li>
+      </ul>
+
+      <h3>Improvements (Future Work)</h3>
+      <ul>
+        <li>If I were to make more changes, I think finding a more consistent and accurate dataset would be the first step. Then I could better organize my data and have more parameters to work with.</li>
+        <li>One feature I think is unfeasible currently would be to reenact past races and allow the user to place bets. At minimum, this would require extensive race results data and it would be impossible to acquire the positions throughout the race if I wanted to properly animate/recreate the race itself. Although, just simply displaying the results of the bet, without any animation at all, could suffice.</li>
+        <li>I would also want to have a specific horse data section, similar to the "specific racecourse" section, where such data like lineage, farm statistics, rivals, and career performance visualizations would be displayed. To take this a step further, with "rivals," two horses could be compared if they have raced before, to show a race history and how both have placed in comparison to one another.</li>
+      </ul>
     </section>
   </main>
 
@@ -94,13 +201,13 @@
     <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
     <p>© 2026 Anthony Yiu. Interactive Arts &amp; Technology.</p>
     <div class="footer-social">
-      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/aky6/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <img src="icons/linkedin.png" alt="LinkedIn" />
       </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+      <a href="https://www.youtube.com/@anthonyy115" target="_blank" rel="noopener" aria-label="YouTube">
         <img src="icons/youtube.png" alt="YouTube" />
       </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="Bluesky">
+      <a href="https://bsky.app/profile/ant-hony15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
         <img src="icons/bluesky.png" alt="Bluesky" />
       </a>
     </div>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Interaction Design Summit — three-day conference focused on UX research methods.">
-  <title>Interaction Design Summit — Anthony Yiu</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="Racc-Moon — a game where your real-life movements launch a raccoon to the moon. StormHacks 2025 project.">
+  <title>Racc-Moon — Anthony Yiu</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="project-page.css" />
+  <link rel="stylesheet" href="../project-page.css" />
   <style>
     .back-link-top {
       display: inline-flex;
@@ -40,30 +40,109 @@
     }
     .back-link:hover { color: var(--ink); border-color: var(--purple); background: rgba(124, 58, 237, 0.05); }
     .back-link svg { width: 16px; height: 16px; }
+    .event-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 28px 0;
+    }
+    .event-meta-grid .meta-item .meta-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .event-meta-grid .meta-item .meta-value {
+      display: block;
+      margin-top: 4px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .event-meta-grid .meta-item .meta-value .team-member {
+      display: block;
+    }
+    .event-section {
+      margin-bottom: 36px;
+      padding-top: 8px;
+    }
+    .event-section h2 {
+      margin: 0 0 10px;
+      font: 600 clamp(1.15rem, 2.4vw, 1.4rem)/1.1 var(--display);
+      letter-spacing: -0.03em;
+    }
+    .event-section p {
+      margin: 0 0 12px;
+      max-width: 760px;
+      color: #4c4b45;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .event-section ul {
+      margin: 8px 0 16px;
+      padding-left: 20px;
+    }
+    .event-section ul li {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #4c4b45;
+    }
+    .built-with-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .built-with-tags span {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: rgba(124, 58, 237, 0.1);
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .video-card {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #000;
+    }
+    .video-card iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .event-meta-grid { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
   <div class="scroll-progress"></div>
   <header class="site-header project-nav">
-    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <a class="brand" href="../index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <div class="nav-dropdown">
-        <a href="index.html#work">Works <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <a href="../index.html#work">Works <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
         <div class="nav-dropdown-menu">
-          <a href="project1.html">A Beautiful Machine</a>
-          <a href="project2.html">Soul Containment Protocol</a>
-          <a href="project3.html">UX Ethnography</a>
-          <a href="project4.html">Data Visualization</a>
+          <a href="../project1.html">A Beautiful Machine</a>
+          <a href="../project2.html">Soul Containment Protocol</a>
+          <a href="../project3.html">UX Ethnography</a>
+          <a href="../project4.html">Data Visualization</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="about.html">About <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <a href="../about.html">About <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
         <div class="nav-dropdown-menu">
-          <a href="about.html">About</a>
-          <a href="activities.html">Activities</a>
+          <a href="../about.html">About</a>
+          <a href="../activities.html">Activities</a>
         </div>
       </div>
-      <a href="index.html#contact">Contact</a>
+      <a href="../index.html#contact">Contact</a>
     </nav>
     <a class="header-cta" href="mailto:aky6@sfu.ca">Get in touch</a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -71,51 +150,147 @@
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <main class="project-main" id="top">
-    <a href="activities.html" class="back-link-top">
+    <a href="../activities.html" class="back-link-top">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Back to Activities
     </a>
 
-    <span class="project-kicker">Conference / 2024</span>
-    <h1 class="project-title">Interaction Design Summit</h1>
-    <p class="project-intro">Three-day conference focused on UX research methods and prototyping tools. Attended workshops on Figma advanced techniques and user testing frameworks.</p>
+    <span class="project-kicker">Hackathon · Oct 4-5, 2025</span>
+    <h1 class="project-title">Racc-Moon</h1>
+    <p class="project-intro">A game where your real-life movements launch a raccoon to the moon! Built with Python, Pygame, OpenCV, and MediaPipe.</p>
 
     <div class="project-hero">
-      <img src="https://via.placeholder.com/800x400" alt="Event hero image" />
+      <img src="../racc/racc1.jpg" alt="Racc-Moon game on laptop" />
     </div>
 
-    <div class="project-info">
-      <div><span class="project-label">Type</span><strong>Conference</strong></div>
-      <div><span class="project-label">Duration</span><strong>3 days</strong></div>
-      <div><span class="project-label">Role</span><strong>Attendee</strong></div>
-      <div><span class="project-label">Focus</span><strong>UX Research & Prototyping</strong></div>
+    <div class="event-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Art &amp; Game Design</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Timeframe</span>
+        <span class="meta-value">StormHacks 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Team</span>
+        <span class="meta-value">
+          <span class="team-member">Anthony Yiu</span>
+          <span class="team-member">Xavier Sandilands</span>
+          <span class="team-member">Markus gotChu</span>
+          <span class="team-member">Alex Xu</span>
+        </span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Focus</span>
+        <span class="meta-value">Pose tracking · Game dev</span>
+      </div>
     </div>
 
-    <section class="project-section">
-      <h2>Overview</h2>
-      <p>The Interaction Design Summit was a three-day intensive conference bringing together designers, researchers, and prototyping experts from around the world. The event focused on practical applications of UX research methods and modern prototyping tools.</p>
-      <p>I attended to deepen my understanding of user testing frameworks and advanced Figma techniques that could be applied to my personal projects and future client work.</p>
+    <section class="event-section">
+      <h2>Demo</h2>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/84e7aDB8qsg" title="Racc-Moon demo" allowfullscreen></iframe>
+      </div>
     </section>
 
-    <section class="project-section">
-      <h2>Key Workshops</h2>
-      <p>The summit featured hands-on workshops covering topics like rapid prototyping, user interview techniques, and design system implementation. I participated in sessions on advanced Figma components and auto-layout strategies.</p>
-      
-      <figure class="figure-block">
-        <img src="https://via.placeholder.com/800x450" alt="Workshop session" />
-        <figcaption>Attending a workshop on advanced Figma prototyping techniques</figcaption>
-      </figure>
-
-      <p>One of the most valuable sessions covered user testing frameworks that I've since applied to my Gesture-Based Navigation Prototype, helping me structure more effective usability tests.</p>
+    <section class="event-section">
+      <h2>Inspiration</h2>
+      <p>As amateur coders/designers and new hackathon participants, we wanted to make a project that didn't require sitting and coding the whole time. Combining our passion for video games and growing interests in technology, we created Racc-Moon, a game that encourages physical movement while making it fun and easily accessible. It is also simple, so anyone can play it!</p>
     </section>
 
-    <section class="project-section">
-      <h2>Networking & Takeaways</h2>
-      <p>Beyond the workshops, the summit provided excellent networking opportunities with industry professionals. I connected with designers working on similar accessibility challenges and learned about emerging tools in the prototyping space.</p>
-      <p>The key takeaway was the importance of iterative testing early in the design process. This reinforced my approach to personal projects, where I now build quick prototypes to test assumptions before committing to full implementations.</p>
+    <section class="event-section">
+      <h2>What it does</h2>
+      <p>Using a webcam and MediaPipe pose estimation, the game tracks the player's movements:</p>
+      <ul>
+        <li>Moving left or right by shifting your body</li>
+        <li>Jump in real life to make raccoon jump in-game</li>
+        <li>The higher you jump, the higher your raccoon jumps</li>
+        <li>Endless platforms until you reach the moon</li>
+      </ul>
     </section>
 
-    <a href="activities.html" class="back-link">
+    <section class="event-section">
+      <h2>How we built it</h2>
+      <p><strong>Tech Stack:</strong></p>
+      <ul>
+        <li><strong>Python</strong> — core language</li>
+        <li><strong>Pygame</strong> — game visuals, logic, sprite animation</li>
+        <li><strong>OpenCV</strong> — real-time webcam access and image processing</li>
+        <li><strong>MediaPipe</strong> — tracking player pose landmarks</li>
+        <li><strong>Copilot</strong> — understanding and finding errors in the code</li>
+      </ul>
+      <p><strong>Core Mechanics:</strong></p>
+      <ul>
+        <li>Horizontal Movement: calculated by detecting player's lateral displacement</li>
+        <li>Jumping: detect vertical position changes of the hips</li>
+      </ul>
+    </section>
+
+    <section class="event-section">
+      <h2>Challenges we ran into</h2>
+      <ul>
+        <li>Small shifts trigger unwanted and weird actions in game</li>
+        <li>Trial and error to convert real life measurements into game measurements</li>
+        <li>Researching and learning what tech stack to use</li>
+        <li>First time meeting each other, took great communication to complete this project</li>
+      </ul>
+    </section>
+
+    <section class="event-section">
+      <h2>Accomplishments we're proud of</h2>
+      <ul>
+        <li>We have not used MediaPipe before, so learning and implementing it in less than 24 hours was satisfying</li>
+        <li>Using Pygame (known to be more simpler than other languages)</li>
+        <li>Ended up completing the game (fully working and playable) with two of us being first time hackathon participants</li>
+      </ul>
+    </section>
+
+    <section class="event-section">
+      <h2>What we learned</h2>
+      <ul>
+        <li>Computer vision is so advanced and more accessible than expected</li>
+        <li>Importance of balancing tech with user experience, constantly playtest to keep it fun and have a good game design</li>
+        <li>Got stuck many times, but got through it as a team</li>
+        <li>Simpler ideas sometimes make for better hackathon projects :)</li>
+      </ul>
+    </section>
+
+    <section class="event-section">
+      <h2>What's next for Racc-Moon</h2>
+      <ul>
+        <li>Let users set a baseline position before starting the game (users are different sizes)</li>
+        <li>Multiplayer to race friends</li>
+        <li>Power-ups and obstacles (ex. jump boost, flying eagles)</li>
+        <li>Fitness metrics</li>
+      </ul>
+    </section>
+
+    <section class="event-section">
+      <h2>Built With</h2>
+      <div class="built-with-tags">
+        <span>MediaPipe</span>
+        <span>OpenCV</span>
+        <span>Pygame</span>
+        <span>Python</span>
+        <span>Webcam</span>
+      </div>
+    </section>
+
+    <section class="event-section">
+      <h2>Try it out</h2>
+      <p><a href="https://devpost.com/software/racc-moon#updates" target="_blank" rel="noopener" style="color: var(--purple); text-decoration: underline;">Devpost — Racc-Moon</a></p>
+    </section>
+
+    <section class="event-section">
+      <h2>Created by</h2>
+      <p><strong>Anthony Yiu</strong> — Art assets</p>
+      <p><strong>Xavier Sandilands</strong> — Base of the game with Pygame (physics and layout)</p>
+      <p><strong>Markus gotChu</strong> — Team member</p>
+      <p><strong>Alex Xu</strong> — Team member</p>
+    </section>
+
+    <a href="../activities.html" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Back to Activities
     </a>
@@ -124,24 +299,24 @@
   <div class="back-to-top-wrap">
     <div></div>
     <a class="back-to-top" href="#top">↑ Back to top</a>
-    <div class="next-project"><a href="activities.html">Activities →</a></div>
+    <div class="next-project"><a href="../activities.html">Activities →</a></div>
   </div>
 
   <footer class="site-footer section-pad">
-    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
+    <a class="brand" href="../index.html"><span class="brand-mark">A</span><span>Anthony Yiu</span></a>
     <p>© 2026 Anthony Yiu. Interactive Arts &amp; Technology.</p>
     <div class="footer-social">
-      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="icons/linkedin.png" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/aky6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="../icons/linkedin.png" alt="LinkedIn" />
       </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
-        <img src="icons/youtube.png" alt="YouTube" />
+      <a href="https://www.youtube.com/@anthonyy115" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="../icons/youtube.png" alt="YouTube" />
       </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="Bluesky">
-        <img src="icons/bluesky.png" alt="Bluesky" />
+      <a href="https://bsky.app/profile/ant-hony15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <img src="../icons/bluesky.png" alt="Bluesky" />
       </a>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
